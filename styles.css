@@ -1,0 +1,184 @@
+/* Global */
+@tailwind base;
+
+/* Components */
+@tailwind components;
+
+/* Utilities */
+@tailwind utilities;
+
+/* Header */
+header {
+    @apply bg-white border-b-2 border-gray-200 py-4;
+}
+
+.header-logo img {
+    @apply h-16;
+}
+
+.nav-menu-wrapper ul {
+    list-style-type: none;
+}
+
+.nav-menu-wrapper .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 12rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    z-index: 50; /* Ensure dropdowns are on top */
+}
+
+.nav-menu-wrapper li:hover > .sub-menu {
+    display: block;
+}
+
+.nav-menu-wrapper .menu-item {
+    position: relative;
+}
+
+.nav-menu-wrapper a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #4A5568;
+    text-decoration: none;
+}
+
+.nav-menu-wrapper a:hover {
+    background-color: #EDF2F7;
+}
+
+/* Ensure images have a lower z-index */
+img {
+    z-index: 0;
+    position: relative;
+}
+
+.newsletter-section {
+    position: relative;
+   
+    margin-bottom: -50px; /* Adjust as needed to overlap */
+}
+
+
+/* Adjust the position of Book an Appointment section */
+.py-16 {
+    position: relative;
+    z-index: 10; /* Ensure it's above the hero section */
+    margin-top: -20px; /* Adjust as needed for the overlap */
+}
+
+/* Ensure the hero section is below the Book an Appointment section */
+.bg-purple-900 {
+    position: relative;
+    z-index: 1; /* Ensure it's behind the appointment section */
+}
+
+
+
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 4s ease-out;
+  }
+
+  /* Add these styles to your existing stylesheet or <style> tag */
+#hero {
+    position: relative;
+}
+
+/* Adjust star animation size and position */
+svg {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    animation: float 5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px); /* Adjust floating distance */
+    }
+}
+
+
+
+   
+
+  /* Define keyframes for plus sign animation */
+  @keyframes rotatePlus {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Style for plus sign animation container */
+  .plus-animation-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure the animation is above content */
+  }
+
+
+  /* Define keyframes for plus sign animation */
+  @keyframes rotateCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .hidden-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 2s ease-out;
+  }
+  .show-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+
+
+   
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
